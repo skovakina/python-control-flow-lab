@@ -49,7 +49,7 @@ def check_voting_eligibility():
     if user_age < 0:
         print("Impossible value")
         return
-    if user_age > voting_age:
+    if user_age >= voting_age:
         print("You can vote")
     else:
         print("You cannot vote")
@@ -186,7 +186,7 @@ def determine_season():
     else:
         season = "Fall"
 
-    print(f"{month_str} {day_str} is in {season}.")
+    print(f"{month_str.capitalize()} {day_str} is in {season}.")
 
 # Call the function
 determine_season()
